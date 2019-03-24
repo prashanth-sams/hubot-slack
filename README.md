@@ -20,3 +20,9 @@ Then you can interact with sams by typing `sams help`.
 
     sams> sams help
     sams help - Displays all of the help commands that sams knows about.
+
+### Blogs about sams - bot
+
+- [Hubot Slack setup]
+
+[Hubot Slack setup]: https://devopsqa.wordpress.com/2019/03/19/hubot-slack-setup/
