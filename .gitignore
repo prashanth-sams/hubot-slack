@@ -3,5 +3,6 @@ node_modules
 .hubot_history
 scripts/junk/
 Makefile
+package-lock.json
 scripts/github_issue_tracker_cron.js
 scripts/github_list_issues_label.coffee
