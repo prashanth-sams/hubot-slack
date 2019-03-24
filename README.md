@@ -11,7 +11,7 @@
 
 ### Slack interaction
 
-- Let's start interacting the bots created; let's say, `hubot help`
+- Let's start interacting with the bots created; let's say, `hubot help`
 
 ```
     hubot> hubot help
