@@ -12,7 +12,7 @@
 ### Slack interaction
 
 - Let's start interacting with the bots created; let's say, `hubot help`
-- You can customize the bot name `hubot` with `your_custom_bot_name`. In this project, I named it as `sams`; say, `sams help`
+- You can customize the bot name `hubot` with `your_custom_bot_name`. In this project, I named it as `sams` from `bin/hubot.cmd && bin/hubot` and made sure the bot name is the same while creating hubot slack token; so , my statement looks like, `sams help`
 
 ```
     hubot> hubot help
