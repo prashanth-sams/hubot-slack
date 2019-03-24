@@ -1,12 +1,13 @@
 ### Run slack bot
 
-- You can start hubot locally by running:
-
+- Start `hubot`
+```
     % bin/hubot --adapter <your_adapter_name> HUBOT_SLACK_TOKEN=xxxx-xxxx-xxxx-xxxx \
     				HUBOT_GITHUB_TOKEN=xxxx \
     				HUBOT_GITHUB_USER=xxxx \
     				HUBOT_GITHUB_API=https://api.github.com \
     				HUBOT_GITHUB_REPO=xxxx
+```
 
 ### Interact slack
 
