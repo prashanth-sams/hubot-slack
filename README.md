@@ -1,6 +1,6 @@
 ### Run slack bot
 
-- Start `hubot`
+- Start `hubot` locally
 ```
     % bin/hubot --adapter <your_adapter_name> HUBOT_SLACK_TOKEN=xxxx-xxxx-xxxx-xxxx \
     				HUBOT_GITHUB_TOKEN=xxxx \
@@ -9,7 +9,7 @@
     				HUBOT_GITHUB_REPO=xxxx
 ```
 
-### Interact slack
+### Slack interaction
 
 - interact with bot by typing eg., `hubot help`.
 
