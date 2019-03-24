@@ -2,7 +2,7 @@
 
 - Start `hubot` locally
 ```
-    % bin/hubot --adapter <your_adapter_name> HUBOT_SLACK_TOKEN=xxxx-xxxx-xxxx-xxxx \
+    % .bin/hubot --adapter <your_adapter_name> HUBOT_SLACK_TOKEN=xxxx-xxxx-xxxx-xxxx \
     				HUBOT_GITHUB_TOKEN=xxxx \
     				HUBOT_GITHUB_USER=xxxx \
     				HUBOT_GITHUB_API=https://api.github.com \
@@ -11,7 +11,7 @@
 
 ### Slack interaction
 
-- interact with bot by typing eg., `hubot help`.
+- Let's start interacting the bots created; let's say, `hubot help`
 
 ```
     hubot> hubot help
