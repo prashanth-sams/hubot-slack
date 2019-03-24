@@ -1,3 +1,7 @@
 node_modules
 .DS_Store*
 .hubot_history
+scripts/junk/
+Makefile
+scripts/github_issue_tracker_cron.js
+scripts/github_list_issues_label.coffee

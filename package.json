@@ -7,8 +7,13 @@
   "dependencies": {
     "child_process": "^1.0.2",
     "coffee-script": "^1.12.7",
+    "cron": "^1.7.0",
+    "date-utils": "^1.2.21",
+    "githubot": "^1.0.1",
     "hubot": "^3.3.1",
     "hubot-diagnostics": "^1.0.0",
+    "hubot-gh-issues": "0.0.4",
+    "hubot-gh-token": "0.0.1",
     "hubot-google-images": "^0.2.7",
     "hubot-google-translate": "^0.2.1",
     "hubot-help": "^1.0.1",
@@ -19,7 +24,11 @@
     "hubot-rules": "^1.0.0",
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.1",
-    "hubot-slack": "^4.6.0"
+    "hubot-slack": "^4.6.0",
+    "lodash": "^4.17.11",
+    "node-cron": "^2.0.3",
+    "underscore": "^1.9.1",
+    "underscore.string": "^3.3.5"
   },
   "engines": {
     "node": "0.10.x"
