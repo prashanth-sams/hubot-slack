@@ -4,5 +4,3 @@ node_modules
 scripts/junk/
 Makefile
 package-lock.json
-scripts/github_issue_tracker_cron.js
-scripts/github_list_issues_label.coffee
