@@ -12,7 +12,8 @@ module.exports = (robot) ->
   robot.respond /closed (.*) (.*)$/i, (msg) ->
     query_params = state: "closed", sort: "created"
     query_params.per_page=100
-    query_params.assignee = msg.match[1] if msg.match[1]?
+    query_params.assignee = msg.match[1] if msg.match[1] != 'all'
+
     if msg.match[2].indexOf("#") != -1
       search = "label"
       query_params.labels = msg.match[2].split("#").join("")

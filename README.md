@@ -28,8 +28,11 @@ The list of commands that qualify under this implementation is described below, 
 | Command     | Description |
 | ---      | ---       |
 | `hubot label <label>` | Lists all the closed issues with specific label         |
-| `hubot closed <assignee> <#label>`     | Lists all the closed issues with specific label and assignee        |
-| `hubot closed <assignee> <text>`     | Lists all the closed issues with specific text        |
+| `hubot closed all <text>`     | Lists all the closed issues with specific text        |
+| `hubot closed all <#label>`     | Lists all the closed issues with specific label        |
+| `hubot closed <assignee> <#label>`     | Lists all the closed issues with assignee and specific label        |
+| `hubot closed <assignee> <text>`     | Lists all the closed issues with assignee and specific text        |
+
 
 ### Support
 - <a href="https://twitter.com/intent/follow?screen_name=prashanthsams"><img src="https://img.shields.io/twitter/follow/prashanthsams.svg?style=social" alt="follow on Twitter"></a>
