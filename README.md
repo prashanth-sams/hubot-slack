@@ -3,15 +3,14 @@
 
 <a href="https://twitter.com/intent/tweet?text=%23hubot%20%23slack%20%23Chatbot%20%23DevOps&url=https://github.com/prashanth-sams/hubot-slack"><img src="https://img.shields.io/twitter/url/https/github.com/prashanth-sams/hubot-slack/.svg?label=Tweet&style=social"></a>
 
-### Run slack bot
+#### Hubot Slack runner
 
-- Start `hubot` locally
 ```
-    $ .bin/hubot --adapter <your_adapter_name> HUBOT_SLACK_TOKEN=xxxx-xxxx-xxxx-xxxx \
-    				HUBOT_GITHUB_TOKEN=xxxx \
-    				HUBOT_GITHUB_USER=xxxx \
-    				HUBOT_GITHUB_API=https://api.github.com \
-    				HUBOT_GITHUB_REPO=xxxx
+$ .bin/hubot --adapter <your_adapter_name> HUBOT_SLACK_TOKEN=xxxx-xxxx-xxxx-xxxx \
+              HUBOT_GITHUB_API=https://api.github.com \
+              HUBOT_GITHUB_TOKEN=xxxx \
+              HUBOT_GITHUB_USER=xxxx \
+              HUBOT_GITHUB_REPO=xxxx
 ```
 
 ### Slack interaction
@@ -20,8 +19,8 @@
 - You can customize the bot name `hubot` with `your_custom_bot_name`. In this project, I named it as `sams` from `bin/hubot.cmd && bin/hubot` and made sure the bot name is the same while creating hubot slack token; so, my statement looks like, `sams help`
 
 ```
-    hubot> hubot help
-    hubot help - Displays all of the help commands that hubot knows about.
+hubot> hubot help
+hubot help - Displays all of the help commands that hubot knows about.
 ```
 
 The list of commands that qualify under this implementation is described below, along with additional info.
