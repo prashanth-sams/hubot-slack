@@ -27,6 +27,7 @@ The list of commands that qualify under this implementation is described below, 
 
 | Command     | Description |
 | ---      | ---       |
+| `hubot issue <#number>` | Lists any issue with specific number         |
 | `hubot label <label>` | Lists all the closed issues with specific label         |
 | `hubot closed all <text>`     | Lists all the closed issues with specific text        |
 | `hubot closed all <#label>`     | Lists all the closed issues with specific label        |
