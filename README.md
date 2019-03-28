@@ -27,12 +27,25 @@ The list of commands that qualify under this implementation is described below, 
 
 | Command     | Description |
 | ---      | ---       |
-| `hubot issue <#number>` | Lists any issue with specific number         |
-| `hubot label <label>` | Lists all the closed issues with specific label         |
-| `hubot closed all <text>`     | Lists all the closed issues with specific text        |
-| `hubot closed all <#label>`     | Lists all the closed issues with specific label        |
-| `hubot closed <assignee> <#label>`     | Lists all the closed issues with assignee and specific label        |
-| `hubot closed <assignee> <text>`     | Lists all the closed issues with assignee and specific text        |
+| `hubot issue <#number>` | Lists an issue with specific number         |
+| `hubot issue any all` | Lists all the issues         |
+| `hubot issue any all <#label>`     | Lists all the issues with specific label        |
+| `hubot issue any all <“text”>`     | Lists all the issues with specific text        |
+| `hubot issue any <assignee>`     | Lists all the issues assigned to a known github user        |
+| `hubot issue any <assignee> <#label>`     | Lists all the issues with specific label assigned to a known github user        |
+| `hubot issue any <assignee> <“text”>` | Lists all the issues with specific text assigned to a known github user         |
+| `hubot issue closed all` | Lists all the closed issues         |
+| `hubot issue closed all <#label>` | Lists all the closed issues with specific label         |
+| `hubot issue closed all <“text”>` | Lists all the closed issues with specific text         |
+| `hubot issue closed <assignee>` | Lists all the closed issues assigned to a known github user         |
+| `hubot issue closed <assignee> <#label>` | Lists all the closed issues with specific label assigned to a known github user         |
+| `hubot issue closed <assignee> <“text”>` | Lists all the closed issues with specific text assigned to a known github user         |
+| `hubot issue open all` | Lists all the open issues         |
+| `hubot issue open all <#label>` | Lists all the open issues with specific label         |
+| `hubot issue open all <“text”>` | Lists all the open issues with specific text         |
+| `hubot issue open <assignee>` | Lists all the open issues assigned to a known github user         |
+| `hubot issue open <assignee> <#label>` | Lists all the open issues with specific label assigned to a known user         |
+| `hubot issue open <assignee> <“text”>` | Lists all the open issues with specific text assigned to a known user         |
 
 
 ### Support

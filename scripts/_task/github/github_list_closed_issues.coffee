@@ -2,14 +2,37 @@
 #   Show closed issues from a Github repository
 
 # Commands:
-#   hubot closed <assignee> <#label> -- Lists all the closed issues with specific label and assignee.
-#   hubot closed <assignee> <text> -- Lists all the closed issues with specific text.
+#   hubot issue closed all -- Lists all the closed issues.
+#   hubot issue closed all <#label> -- Lists all the closed issues with specific label.
+#   hubot issue closed all <“text”> -- Lists all the closed issues with specific text.
+#   hubot issue closed <assignee> -- Lists all the closed issues assigned to a known github user.
+#   hubot issue closed <assignee> <#label> -- Lists all the closed issues with specific label assigned to a known github user.
+#   hubot issue closed <assignee> <“text”> -- Lists all the closed issues with specific text assigned to a known github user.
+
 _  = require("underscore")
 
 module.exports = (robot) ->
   github = require("githubot")(robot)
 
-  robot.respond /closed (.*) (.*)$/i, (msg) ->
+  robot.respond /issue closed (.*)$/i, (msg) ->
+    query_params = state: "closed", sort: "created"
+    query_params.per_page=100
+    query_params.assignee = msg.match[1] if msg.match[1] != 'all'
+
+    console.log "============"
+    console.log query_params
+    console.log "============"
+
+    base_url = process.env.HUBOT_GITHUB_API || 'https://api.github.com'
+
+    github.get "#{base_url}/repos/#{process.env.HUBOT_GITHUB_USER}/#{process.env.HUBOT_GITHUB_REPO}/issues", query_params, (issues) ->
+      if !_.isEmpty issues
+        for issue in issues
+          msg.send "> `issue ##{issue.number}` #{issue.title}"
+      else
+        msg.send "No closed issues"
+
+  robot.respond /issue closed (.*) (.*)?$/i, (msg) ->
     query_params = state: "closed", sort: "created"
     query_params.per_page=100
     query_params.assignee = msg.match[1] if msg.match[1] != 'all'
@@ -17,9 +40,11 @@ module.exports = (robot) ->
     if msg.match[2].indexOf("#") != -1
       search = "label"
       query_params.labels = msg.match[2].split("#").join("")
-    else
+    else if msg.match[2].match('“|”|"|\'|‘|’')
       search = "text"
-      get_text = msg.match[2]
+      get_text = msg.match[2].replace /[“”"'‘’]/g, ""
+    else
+      console.log msg.match[2]
 
     console.log "============"
     console.log query_params
