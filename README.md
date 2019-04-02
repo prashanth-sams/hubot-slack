@@ -48,6 +48,10 @@ The list of commands that qualify under this implementation is described below, 
 | `hubot issue open <assignee> <“text”>` | Lists all the open issues with specific text assigned to a known user         |
 | `hubot issue close <#number>`     | Close an existing issue        |
 | `hubot issue reopen <#number>`     | Re-open an existing issue        |
+| `hubot issue create <“title”>`     | Create an issue with title        |
+| `hubot issue create <“title”> <#label>`     | Create an issue with title and label        |
+| `hubot issue create <“title”> body <{body}>`     | Create an issue with title and body        |
+| `hubot issue create <“title”> body <{body}> <#label>`     | Create an issue with title, body, and label        |
 
 ### Support
 - <a href="https://twitter.com/intent/follow?screen_name=prashanthsams"><img src="https://img.shields.io/twitter/follow/prashanthsams.svg?style=social" alt="follow on Twitter"></a>
