@@ -1,7 +1,7 @@
 ## Hubot Slack
 > A chatbot for [#slack] using [Hubot] service
 
-<a href="https://twitter.com/intent/tweet?text=%23hubot%20%23slack%20%23Chatbot%20%23DevOps&url=https://github.com/prashanth-sams/hubot-slack"><img src="https://img.shields.io/twitter/url/https/github.com/prashanth-sams/hubot-slack/.svg?label=Tweet&style=social"></a>
+<a href="https://twitter.com/intent/tweet?text=%23hubot%20%23slack%20%23Chatbot%20%23DevOps&url=https://github.com/prashanth-sams/hubot-slack"><img src="https://img.shields.io/twitter/url/https/twitter.com/prashanthsams.svg?label=Tweet&style=social"></a>
 
 #### Hubot Slack runner
 
@@ -52,6 +52,13 @@ The list of commands that qualify under this implementation is described below, 
 | `hubot issue create <“title”> <#label>`     | Create an issue with title and label        |
 | `hubot issue create <“title”> body <{body}>`     | Create an issue with title and body        |
 | `hubot issue create <“title”> body <{body}> <#label>`     | Create an issue with title, body, and label        |
+| `hubot pr <#number>`     | Lists a pull request with specific number        |
+| `hubot pr any all`     | Lists all the pull requests        |
+| `hubot pr any all <#label>`     | Lists all the pull requests with specific label        |
+| `hubot pr any all <#text>`     | Lists all the pull requests with specific text        |
+| `hubot pr any <assignee>`     | Lists all the pull requests assigned to a known github user        |
+| `hubot pr any <assignee> <#label>`     | Lists all the pull requests with specific label assigned to a known github user        |
+| `hubot pr any <assignee> <#text>`     | Lists all the pull requests with specific text assigned to a known github user        |
 
 ### Support
 - <a href="https://twitter.com/intent/follow?screen_name=prashanthsams"><img src="https://img.shields.io/twitter/follow/prashanthsams.svg?style=social" alt="follow on Twitter"></a>
