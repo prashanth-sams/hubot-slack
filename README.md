@@ -1,7 +1,7 @@
 ## Hubot Slack
 > A chatbot for [#slack] using [Hubot] service
 
-<a href="https://twitter.com/intent/tweet?text=%23hubot%20%23slack%20%23Chatbot%20%23DevOps&url=https://github.com/prashanth-sams/hubot-slack"><img src="https://img.shields.io/twitter/url/https/twitter.com/prashanthsams.svg?label=Tweet&style=social"></a>
+<a href="https://twitter.com/intent/tweet?text=%23hubot%20%23slack%20%23Chatbot%20%23DevOps%20%40prashanthsams&url=https://github.com/prashanth-sams/hubot-slack"><img src="https://img.shields.io/twitter/url/https/twitter.com/prashanthsams.svg?label=Tweet&style=social"></a>
 
 #### Hubot Slack runner
 
@@ -27,7 +27,7 @@ The list of commands that qualify under this implementation is described below, 
 
 | Command     | Description |
 | ---      | ---       |
-| `hubot issue <#number>` | Lists an issue with specific number         |
+| `hubot issue <#number>` | Display an issue with specific number         |
 | `hubot issue any all` | Lists all the issues         |
 | `hubot issue any all <#label>`     | Lists all the issues with specific label        |
 | `hubot issue any all <“text”>`     | Lists all the issues with specific text        |
@@ -52,13 +52,25 @@ The list of commands that qualify under this implementation is described below, 
 | `hubot issue create <“title”> <#label>`     | Create an issue with title and label        |
 | `hubot issue create <“title”> body <{body}>`     | Create an issue with title and body        |
 | `hubot issue create <“title”> body <{body}> <#label>`     | Create an issue with title, body, and label        |
-| `hubot pr <#number>`     | Lists a pull request with specific number        |
+| `hubot pr <#number>`     | Display a pull request with specific number        |
 | `hubot pr any all`     | Lists all the pull requests        |
 | `hubot pr any all <#label>`     | Lists all the pull requests with specific label        |
 | `hubot pr any all <#text>`     | Lists all the pull requests with specific text        |
 | `hubot pr any <assignee>`     | Lists all the pull requests assigned to a known github user        |
 | `hubot pr any <assignee> <#label>`     | Lists all the pull requests with specific label assigned to a known github user        |
 | `hubot pr any <assignee> <#text>`     | Lists all the pull requests with specific text assigned to a known github user        |
+| `hubot pr closed all`     | Lists all the closed pull requests        |
+| `hubot pr closed all <#label>`     | Lists all the closed pull requests with specific label        |
+| `hubot pr closed all <“text”>`     | Lists all the closed pull requests with specific text        |
+| `hubot pr closed <assignee>`     | Lists all the closed pull requests assigned to a known github user        |
+| `hubot pr closed <assignee> <#label>`     | Lists all the closed pull requests with specific label assigned to a known github user        |
+| `hubot pr closed <assignee> <“text”>`     | Lists all the closed pull requests with specific text assigned to a known github user        |
+| `hubot pr open all`     | Lists all the open pull requests        |
+| `hubot pr open all <#label>`     | Lists all the open pull requests with specific label        |
+| `hubot pr open all <“text”>`     | Lists all the open pull requests with specific text        |
+| `hubot pr open <assignee>`     | Lists all the open pull requests assigned to a known github user        |
+| `hubot pr open <assignee> <#label>`     | Lists all the open pull requests with specific label assigned to a known user        |
+| `hubot pr open <assignee> <“text”>`     | Lists all the open pull requests with specific text assigned to a known user        |
 
 ### Support
 - <a href="https://twitter.com/intent/follow?screen_name=prashanthsams"><img src="https://img.shields.io/twitter/follow/prashanthsams.svg?style=social" alt="follow on Twitter"></a>
