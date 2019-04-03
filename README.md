@@ -59,6 +59,18 @@ The list of commands that qualify under this implementation is described below, 
 | `hubot pr any <assignee>`     | Lists all the pull requests assigned to a known github user        |
 | `hubot pr any <assignee> <#label>`     | Lists all the pull requests with specific label assigned to a known github user        |
 | `hubot pr any <assignee> <#text>`     | Lists all the pull requests with specific text assigned to a known github user        |
+| `hubot pr closed all`     | Lists all the closed pull requests        |
+| `hubot pr closed all <#label>`     | Lists all the closed pull requests with specific label        |
+| `hubot pr closed all <“text”>`     | Lists all the closed pull requests with specific text        |
+| `hubot pr closed <assignee>`     | Lists all the closed pull requests assigned to a known github user        |
+| `hubot pr closed <assignee> <#label>`     | Lists all the closed pull requests with specific label assigned to a known github user        |
+| `hubot pr closed <assignee> <“text”>`     | Lists all the closed pull requests with specific text assigned to a known github user        |
+| `hubot pr open all`     | Lists all the open pull requests        |
+| `hubot pr open all <#label>`     | Lists all the open pull requests with specific label        |
+| `hubot pr open all <“text”>`     | Lists all the open pull requests with specific text        |
+| `hubot pr open <assignee>`     | Lists all the open pull requests assigned to a known github user        |
+| `hubot pr open <assignee> <#label>`     | Lists all the open pull requests with specific label assigned to a known user        |
+| `hubot pr open <assignee> <“text”>`     | Lists all the open pull requests with specific text assigned to a known user        |
 
 ### Support
 - <a href="https://twitter.com/intent/follow?screen_name=prashanthsams"><img src="https://img.shields.io/twitter/follow/prashanthsams.svg?style=social" alt="follow on Twitter"></a>
