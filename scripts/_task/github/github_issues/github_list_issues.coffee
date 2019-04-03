@@ -81,7 +81,7 @@ module.exports = (robot) ->
             for issue in issues
               msg.send "> `issue ##{issue.number}` #{issue.title}"
           else
-            msg.send "No issues with this filter!"
+            msg.reply "No issues with this filter!"
 
         when 'text'
           count = 0
@@ -90,7 +90,8 @@ module.exports = (robot) ->
               count += 1
               if issue.title.indexOf("#{get_text}") != -1
                 msg.send "> `issue ##{issue.number}` #{issue.title}"
+                actual_count = prs.length
               else
-                msg.send "No issues with title containing text `#{get_text}`" if count == issues.length
+                msg.reply "No issues with title containing text `#{get_text}`" if !actual_count && count == prs.length
           else
-            msg.send "No issues found!"
+            msg.reply "No issues found!"

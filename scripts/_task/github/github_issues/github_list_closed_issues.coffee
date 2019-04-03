@@ -60,7 +60,7 @@ module.exports = (robot) ->
             for issue in issues
               msg.send "> `issue ##{issue.number}` #{issue.title}"
           else
-            msg.send "No closed issues with this filter!"
+            msg.reply "No closed issues with this filter!"
 
         when 'text'
           count = 0
@@ -69,7 +69,8 @@ module.exports = (robot) ->
               count += 1
               if issue.title.indexOf("#{get_text}") != -1
                 msg.send "> `issue ##{issue.number}` #{issue.title}"
+                actual_count = issues.length
               else
-                msg.send "No closed issues with title containing text `#{get_text}`" if count == issues.length
+                msg.reply "No closed issues with title containing text `#{get_text}`" if !actual_count && count == issues.length
           else
-            msg.send "No closed issues found!"
+            msg.reply "No closed issues found!"
