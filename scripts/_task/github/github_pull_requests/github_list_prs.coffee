@@ -2,7 +2,7 @@
 #   Show a(all) pr(s) from a Github repository
 
 # Commands:
-#   hubot pr <#number> -- Lists a pull request with specific number.
+#   hubot pr <#number> -- Display a pull request with specific number.
 #   hubot pr any all -- Lists all the pull requests.
 #   hubot pr any all <#label> -- Lists all the pull requests with specific label.
 #   hubot pr any all <#text> -- Lists all the pull requests with specific text.
