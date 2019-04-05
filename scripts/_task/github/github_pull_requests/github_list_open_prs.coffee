@@ -68,16 +68,16 @@ module.exports = (robot) ->
     repo = "#{process.env.HUBOT_GITHUB_USER}/#{process.env.HUBOT_GITHUB_REPO}"
 
     if assignee != 'all' && (search == 'text' || search == 'no param')
-      url = "#{base_url}/search/issues?q=is:pr%20state:open%20assignee:#{assignee}%20closed:#{date}%20repo:#{repo}" if date
+      url = "#{base_url}/search/issues?q=is:pr%20state:open%20assignee:#{assignee}%20created:#{date}%20repo:#{repo}" if date
       url = "#{base_url}/search/issues?q=is:pr%20state:open%20assignee:#{assignee}%20repo:#{repo}" if !date
     else if assignee != 'all' && search == 'label'
-      url = "#{base_url}/search/issues?q=is:pr%20state:open%20assignee:#{assignee}%20label:#{labels}%20closed:#{date}%20repo:#{repo}" if date
+      url = "#{base_url}/search/issues?q=is:pr%20state:open%20assignee:#{assignee}%20label:#{labels}%20created:#{date}%20repo:#{repo}" if date
       url = "#{base_url}/search/issues?q=is:pr%20state:open%20assignee:#{assignee}%20label:#{labels}%20repo:#{repo}" if !date
     else if assignee == 'all' && (search == 'text' || search == 'no param')
-      url = "#{base_url}/search/issues?q=is:pr%20state:open%20closed:#{date}%20repo:#{repo}" if date
+      url = "#{base_url}/search/issues?q=is:pr%20state:open%20created:#{date}%20repo:#{repo}" if date
       url = "#{base_url}/search/issues?q=is:pr%20state:open%20repo:#{repo}" if !date
     else if assignee == 'all' && search == 'label'
-      url = "#{base_url}/search/issues?q=is:pr%20state:open%20label:#{labels}%20closed:#{date}%20repo:#{repo}" if date
+      url = "#{base_url}/search/issues?q=is:pr%20state:open%20label:#{labels}%20created:#{date}%20repo:#{repo}" if date
       url = "#{base_url}/search/issues?q=is:pr%20state:open%20label:#{labels}%20repo:#{repo}" if !date
     else
       console.log "No matchers with this filter"

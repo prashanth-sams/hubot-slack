@@ -4,23 +4,23 @@
 # Commands:
 #   hubot pr <#number> -- Display a pull request with specific number.
 #   hubot pr any all -- Lists all the pull requests.
-#   hubot pr any all <YYYY-MM-DD> -- Lists all the pull requests with specific date.
-#   hubot pr any all <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests with specific date range.
+#   hubot pr any all <YYYY-MM-DD> -- Lists all the pull requests updated with specific date.
+#   hubot pr any all <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests updated with specific date range.
 #   hubot pr any all <#label> -- Lists all the pull requests with specific label.
-#   hubot pr any all <#label> <YYYY-MM-DD> -- Lists all the pull requests with specific label and date.
-#   hubot pr any all <#label> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests with specific label and date range.
+#   hubot pr any all <#label> <YYYY-MM-DD> -- Lists all the pull requests updated with specific label and date.
+#   hubot pr any all <#label> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests updated with specific label and date range.
 #   hubot pr any all <#text> -- Lists all the pull requests with specific text.
-#   hubot pr any all <#text> <YYYY-MM-DD> -- Lists all the pull requests with specific text and date.
-#   hubot pr any all <#text> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests with specific text and date range.
+#   hubot pr any all <#text> <YYYY-MM-DD> -- Lists all the pull requests updated with specific text and date.
+#   hubot pr any all <#text> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests updated with specific text and date range.
 #   hubot pr any <assignee> -- Lists all the pull requests assigned to a known github user.
-#   hubot pr any <assignee> <YYYY-MM-DD> -- Lists all the pull requests assigned to a known github user with specific date.
-#   hubot pr any <assignee> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests assigned to a known github user with specific date range.
+#   hubot pr any <assignee> <YYYY-MM-DD> -- Lists all the pull requests assigned to a known github user updated with specific date.
+#   hubot pr any <assignee> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests assigned to a known github user updated with specific date range.
 #   hubot pr any <assignee> <#label> -- Lists all the pull requests with specific label assigned to a known github user.
-#   hubot pr any <assignee> <#label> <YYYY-MM-DD> -- Lists all the pull requests with specific label and date assigned to a known github user.
-#   hubot pr any <assignee> <#label> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests with specific label and date assigned to a known github user.
+#   hubot pr any <assignee> <#label> <YYYY-MM-DD> -- Lists all the pull requests updated with specific label and date assigned to a known github user.
+#   hubot pr any <assignee> <#label> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests updated with specific label and date assigned to a known github user.
 #   hubot pr any <assignee> <#text> -- Lists all the pull requests with specific text assigned to a known github user.
-#   hubot pr any <assignee> <#text> <YYYY-MM-DD> -- Lists all the pull requests with specific text and date assigned to a known github user.
-#   hubot pr any <assignee> <#text> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests with specific text and date range assigned to a known github user.
+#   hubot pr any <assignee> <#text> <YYYY-MM-DD> -- Lists all the pull requests updated with specific text and date assigned to a known github user.
+#   hubot pr any <assignee> <#text> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests updated with specific text and date range assigned to a known github user.
 
 _  = require("underscore")
 
@@ -82,16 +82,16 @@ module.exports = (robot) ->
     repo = "#{process.env.HUBOT_GITHUB_USER}/#{process.env.HUBOT_GITHUB_REPO}"
 
     if assignee != 'all' && (search == 'text' || search == 'no param')
-      url = "#{base_url}/search/issues?q=is:pr%20assignee:#{assignee}%20closed:#{date}%20repo:#{repo}" if date
+      url = "#{base_url}/search/issues?q=is:pr%20assignee:#{assignee}%20updated:#{date}%20repo:#{repo}" if date
       url = "#{base_url}/search/issues?q=is:pr%20assignee:#{assignee}%20repo:#{repo}" if !date
     else if assignee != 'all' && search == 'label'
-      url = "#{base_url}/search/issues?q=is:pr%20assignee:#{assignee}%20label:#{labels}%20closed:#{date}%20repo:#{repo}" if date
+      url = "#{base_url}/search/issues?q=is:pr%20assignee:#{assignee}%20label:#{labels}%20updated:#{date}%20repo:#{repo}" if date
       url = "#{base_url}/search/issues?q=is:pr%20assignee:#{assignee}%20label:#{labels}%20repo:#{repo}" if !date
     else if assignee == 'all' && (search == 'text' || search == 'no param')
-      url = "#{base_url}/search/issues?q=is:pr%20closed:#{date}%20repo:#{repo}" if date
+      url = "#{base_url}/search/issues?q=is:pr%20updated:#{date}%20repo:#{repo}" if date
       url = "#{base_url}/search/issues?q=is:pr%20repo:#{repo}" if !date
     else if assignee == 'all' && search == 'label'
-      url = "#{base_url}/search/issues?q=is:pr%20label:#{labels}%20closed:#{date}%20repo:#{repo}" if date
+      url = "#{base_url}/search/issues?q=is:pr%20label:#{labels}%20updated:#{date}%20repo:#{repo}" if date
       url = "#{base_url}/search/issues?q=is:pr%20label:#{labels}%20repo:#{repo}" if !date
     else
       console.log "No matchers with this filter"
