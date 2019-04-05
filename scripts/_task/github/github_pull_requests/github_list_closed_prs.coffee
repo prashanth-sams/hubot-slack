@@ -34,7 +34,7 @@ LIST_CMD = ///
 parse_criteria = (message) ->
   [assignee, param, date] = message.match(LIST_CMD)[1..]
   assignee: assignee if assignee?,
-  param: param if param?
+  param: param if param?,
   date: date if date?
 
 module.exports = (robot) ->
