@@ -54,23 +54,23 @@ The list of commands that qualify under this implementation is described below, 
 | `hubot issue create <“title”> body <{body}> <#label>`     | Create an issue with title, body, and label        |
 | `hubot pr <#number>`     | Display a pull request with specific number        |
 | `hubot pr any all`     | Lists all the pull requests        |
-| `hubot pr any all <YYYY-MM-DD>`     | Lists all the pull requests with specific date        |
-| `hubot pr any all <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the pull requests with specific date range        |
+| `hubot pr any all <YYYY-MM-DD>`     | Lists all the pull requests updated with specific date        |
+| `hubot pr any all <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the pull requests updated with specific date range        |
 | `hubot pr any all <#label>`     | Lists all the pull requests with specific label        |
-| `hubot pr any all <#label> <YYYY-MM-DD>`     | Lists all the pull requests with specific label and date        |
-| `hubot pr any all <#label> <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the pull requests with specific label and date range        |
+| `hubot pr any all <#label> <YYYY-MM-DD>`     | Lists all the pull requests updated with specific label and date        |
+| `hubot pr any all <#label> <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the pull requests updated with specific label and date range        |
 | `hubot pr any all <#text>`     | Lists all the pull requests with specific text        |
-| `hubot pr any all <#text> <YYYY-MM-DD>`     | Lists all the pull requests with specific text and date        |
-| `hubot pr any all <#text> <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the pull requests with specific text and date range        |
+| `hubot pr any all <#text> <YYYY-MM-DD>`     | Lists all the pull requests updated with specific text and date        |
+| `hubot pr any all <#text> <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the pull requests updated with specific text and date range        |
 | `hubot pr any <assignee>`     | Lists all the pull requests assigned to a known github user        |
-| `hubot pr any <assignee> <YYYY-MM-DD>`     | Lists all the pull requests assigned to a known github user with specific date        |
-| `hubot pr any <assignee> <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the pull requests assigned to a known github user with specific date range        |
+| `hubot pr any <assignee> <YYYY-MM-DD>`     | Lists all the pull requests assigned to a known github user updated with specific date        |
+| `hubot pr any <assignee> <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the pull requests assigned to a known github user updated with specific date range        |
 | `hubot pr any <assignee> <#label>`     | Lists all the pull requests with specific label assigned to a known github user        |
-| `hubot pr any <assignee> <#label> <YYYY-MM-DD>`     | Lists all the pull requests with specific label and date assigned to a known github user        |
-| `hubot pr any <assignee> <#label> <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the pull requests with specific label and date assigned to a known github user        |
+| `hubot pr any <assignee> <#label> <YYYY-MM-DD>`     | Lists all the pull requests updated with specific label and date assigned to a known github user        |
+| `hubot pr any <assignee> <#label> <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the pull requests updated with specific label and date assigned to a known github user        |
 | `hubot pr any <assignee> <#text>`     | Lists all the pull requests with specific text assigned to a known github user        |
-| `hubot pr any <assignee> <#text> <YYYY-MM-DD>`     | Lists all the pull requests with specific text and date assigned to a known github user        |
-| `hubot pr any <assignee> <#text> <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the pull requests with specific text and date range assigned to a known github user        |
+| `hubot pr any <assignee> <#text> <YYYY-MM-DD>`     | Lists all the pull requests updated with specific text and date assigned to a known github user        |
+| `hubot pr any <assignee> <#text> <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the pull requests updated with specific text and date range assigned to a known github user        |
 | `hubot pr closed all`     | Lists all the closed pull requests        |
 | `hubot pr closed all <YYYY-MM-DD>`     | Lists all the closed pull requests with specific date        |
 | `hubot pr closed all <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the closed pull requests with specific date range        |
