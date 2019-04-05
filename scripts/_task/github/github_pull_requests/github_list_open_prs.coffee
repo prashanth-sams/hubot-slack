@@ -1,28 +1,41 @@
 # Description:
 #   Show open pull requests from a Github repository
-#
+
 # Commands:
 #   hubot pr open all -- Lists all the open pull requests.
+#   hubot pr open all <YYYY-MM-DD> -- Lists all the open pull requests with specific date.
+#   hubot pr open all <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the open pull requests with specific date range.
 #   hubot pr open all <#label> -- Lists all the open pull requests with specific label.
+#   hubot pr open all <#label> <YYYY-MM-DD> -- Lists all the open pull requests with specific label and date.
+#   hubot pr open all <#label> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the open pull requests with specific label and date range.
 #   hubot pr open all <“text”> -- Lists all the open pull requests with specific text.
+#   hubot pr open all <“text”> <YYYY-MM-DD> -- Lists all the open pull requests with specific text and date.
+#   hubot pr open all <“text”> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the open pull requests with specific text and date range.
 #   hubot pr open <assignee> -- Lists all the open pull requests assigned to a known github user.
+#   hubot pr open <assignee> <YYYY-MM-DD> -- Lists all the open pull requests assigned to a known github user with specific date.
+#   hubot pr open <assignee> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the open pull requests assigned to a known github user with specific date range.
 #   hubot pr open <assignee> <#label> -- Lists all the open pull requests with specific label assigned to a known user.
+#   hubot pr open <assignee> <#label> <YYYY-MM-DD> -- Lists all the open pull requests with specific label and date assigned to a known user.
+#   hubot pr open <assignee> <#label> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the open pull requests with specific label and date range assigned to a known user.
 #   hubot pr open <assignee> <“text”> -- Lists all the open pull requests with specific text assigned to a known user.
+#   hubot pr open <assignee> <“text”> <YYYY-MM-DD> -- Lists all the open pull requests with specific text and date assigned to a known user.
+#   hubot pr open <assignee> <“text”> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the open pull requests with specific text and date range assigned to a known user.
 
 _  = require("underscore")
 
 LIST_CMD = ///
   pr\s
   open\s*
-  (\w+-\w*|\w+_\w*|\w*)?\s*
-  (\#.*|“.*”)?
+  ((?!\d\d\d\d)[\w-]+)?\s*
+  ([#]+[^\s]+|“.*”|‘.*’|".*")?\s*
+  (\d\d\d\d-\d\d-\d\d..\d\d\d\d-\d\d-\d\d|\d\d\d\d-\d\d-\d\d)?
 ///i
 
 parse_criteria = (message) ->
-  [assignee, param] = message.match(LIST_CMD)[1..]
+  [assignee, param, date] = message.match(LIST_CMD)[1..]
   assignee: assignee if assignee?,
-  param: param if param?
-
+  param: param if param?,
+  date: date if date?
 
 module.exports = (robot) ->
   github = require("githubot")(robot)
@@ -49,17 +62,23 @@ module.exports = (robot) ->
     else
       search = "no param"
 
+    date = criteria.date if criteria.date
+
     base_url = process.env.HUBOT_GITHUB_API || 'https://api.github.com'
     repo = "#{process.env.HUBOT_GITHUB_USER}/#{process.env.HUBOT_GITHUB_REPO}"
 
     if assignee != 'all' && (search == 'text' || search == 'no param')
-      url = "#{base_url}/search/issues?q=is:pr%20state:open%20assignee:#{assignee}%20repo:#{repo}"
+      url = "#{base_url}/search/issues?q=is:pr%20state:open%20assignee:#{assignee}%20created:#{date}%20repo:#{repo}" if date
+      url = "#{base_url}/search/issues?q=is:pr%20state:open%20assignee:#{assignee}%20repo:#{repo}" if !date
     else if assignee != 'all' && search == 'label'
-      url = "#{base_url}/search/issues?q=is:pr%20state:open%20assignee:#{assignee}%20label:#{labels}%20repo:#{repo}"
+      url = "#{base_url}/search/issues?q=is:pr%20state:open%20assignee:#{assignee}%20label:#{labels}%20created:#{date}%20repo:#{repo}" if date
+      url = "#{base_url}/search/issues?q=is:pr%20state:open%20assignee:#{assignee}%20label:#{labels}%20repo:#{repo}" if !date
     else if assignee == 'all' && (search == 'text' || search == 'no param')
-      url = "#{base_url}/search/issues?q=is:pr%20state:open%20repo:#{repo}"
+      url = "#{base_url}/search/issues?q=is:pr%20state:open%20created:#{date}%20repo:#{repo}" if date
+      url = "#{base_url}/search/issues?q=is:pr%20state:open%20repo:#{repo}" if !date
     else if assignee == 'all' && search == 'label'
-      url = "#{base_url}/search/issues?q=is:pr%20state:open%20label:#{labels}%20repo:#{repo}"
+      url = "#{base_url}/search/issues?q=is:pr%20state:open%20label:#{labels}%20created:#{date}%20repo:#{repo}" if date
+      url = "#{base_url}/search/issues?q=is:pr%20state:open%20label:#{labels}%20repo:#{repo}" if !date
     else
       console.log "No matchers with this filter"
 
