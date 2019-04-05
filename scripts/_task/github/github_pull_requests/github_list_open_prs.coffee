@@ -25,7 +25,7 @@ _  = require("underscore")
 
 LIST_CMD = ///
   pr\s
-  any\s*
+  open\s*
   ((?!\d\d\d\d)[\w-]+)?\s*
   ([#]+[^\s]+|“.*”|‘.*’|".*")?\s*
   (\d\d\d\d-\d\d-\d\d..\d\d\d\d-\d\d-\d\d|\d\d\d\d-\d\d-\d\d)?
