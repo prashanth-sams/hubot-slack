@@ -71,9 +71,9 @@ The list of commands that qualify under this implementation is described below, 
 | `hubot pr any <assignee> <#text>`     | Lists all the pull requests with specific text assigned to a known github user        |
 | `hubot pr any <assignee> <#text> <YYYY-MM-DD>`     | Lists all the pull requests updated with specific text and date assigned to a known github user        |
 | `hubot pr any <assignee> <#text> <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the pull requests updated with specific text and date range assigned to a known github user        |
-| `hubot pr closed all` `hubot pr closed`     | Lists all the closed pull requests        |
-| `hubot pr closed all <YYYY-MM-DD>` `hubot pr closed <YYYY-MM-DD>`     | Lists all the closed pull requests with specific date        |
-| `hubot pr closed all <YYYY-MM-DD..YYYY-MM-DD>` `hubot pr closed <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the closed pull requests with specific date range        |
+| `hubot pr closed all` <br> `hubot pr closed`     | Lists all the closed pull requests        |
+| `hubot pr closed all <YYYY-MM-DD>` <br> `hubot pr closed <YYYY-MM-DD>`     | Lists all the closed pull requests with specific date        |
+| `hubot pr closed all <YYYY-MM-DD..YYYY-MM-DD>` <br> `hubot pr closed <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the closed pull requests with specific date range        |
 | `hubot pr closed all <#label>`     | Lists all the closed pull requests with specific label        |
 | `hubot pr closed all <#label> <YYYY-MM-DD>`     | Lists all the closed pull requests with specific label and date        |
 | `hubot pr closed all <#label> <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the closed pull requests with specific label and date range        |
@@ -89,7 +89,7 @@ The list of commands that qualify under this implementation is described below, 
 | `hubot pr closed <assignee> <“text”>`     | Lists all the closed pull requests with specific text assigned to a known github user        |
 | `hubot pr closed <assignee> <“text”> <YYYY-MM-DD>`     | Lists all the closed pull requests with specific text assigned to a known github user with specific date        |
 | `hubot pr closed <assignee> <“text”> <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the closed pull requests with specific text assigned to a known github user with specific date range        |
-| `hubot pr open all` `hubot pr open`     | Lists all the open pull requests        |
+| `hubot pr open all` <br> `hubot pr open`     | Lists all the open pull requests        |
 | `hubot pr open all <YYYY-MM-DD>`     | Lists all the open pull requests with specific date        |
 | `hubot pr open all <YYYY-MM-DD..YYYY-MM-DD>`     | Lists all the open pull requests with specific date range        |
 | `hubot pr open all <#label>`     | Lists all the open pull requests with specific label        |
