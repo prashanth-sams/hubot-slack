@@ -28,29 +28,65 @@ The list of commands that qualify under this implementation is described below, 
 ### Github Issues
 ------
 
-List, Create, and Reopen GitHub issues
+List, Create, Close, Open and Reopen GitHub issues
 
 | Command     | Description |
 | ---      | ---       |
 | `hubot issue <#number>` | Display an issue with specific number         |
-| `hubot issue any all` | Lists all the issues         |
-| `hubot issue any all <#label>`     | Lists all the issues with specific label        |
-| `hubot issue any all <“text”>`     | Lists all the issues with specific text        |
-| `hubot issue any <assignee>`     | Lists all the issues assigned to a known github user        |
-| `hubot issue any <assignee> <#label>`     | Lists all the issues with specific label assigned to a known github user        |
-| `hubot issue any <assignee> <“text”>` | Lists all the issues with specific text assigned to a known github user         |
-| `hubot issue closed all` | Lists all the closed issues         |
-| `hubot issue closed all <#label>` | Lists all the closed issues with specific label         |
-| `hubot issue closed all <“text”>` | Lists all the closed issues with specific text         |
+| `hubot issue any` <br> `hubot issue any all` | Lists all the open & closed issues         |
+| `hubot issue any <YYYY-MM-DD>` <br> `hubot issue any all <YYYY-MM-DD>` | Lists all the open & closed issues updated with specific date         |
+| `hubot issue any <YYYY-MM-DD..YYYY-MM-DD>` <br> `hubot issue any all <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the open & closed issues updated with specific date range         |
+| `hubot issue any <#label>` <br> `hubot issue any all <#label>` | Lists all the open & closed issues with specific label         |
+| `hubot issue any <#label> <YYYY-MM-DD>` <br> `hubot issue any all <#label> <YYYY-MM-DD>` | Lists all the open & closed issues updated with specific label and date         |
+| `hubot issue any <#label> <YYYY-MM-DD..YYYY-MM-DD>` <br> `hubot issue any all <#label> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the open & closed issues updated with specific label and date range         |
+| `hubot issue any <#text>` <br> `hubot issue any all <#text>` | Lists all the open & closed issues with specific text         |
+| `hubot issue any <#text> <YYYY-MM-DD>` <br> `hubot issue any all <#text> <YYYY-MM-DD>` | Lists all the open & closed issues updated with specific text and date         |
+| `hubot issue any <#text> <YYYY-MM-DD..YYYY-MM-DD>` <br> `hubot issue any all <#text> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the open & closed issues updated with specific text and date range         |
+| `hubot issue any <assignee>`     | Lists all the open & closed issues assigned to a known github user        |
+| `hubot issue any <assignee> <YYYY-MM-DD>` | Lists all the open & closed issues assigned to a known github user updated with specific date         |
+| `hubot issue any <assignee> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the open & closed issues assigned to a known github user updated with specific date range         |
+| `hubot issue any <assignee> <#label>` | Lists all the open & closed issues with specific label assigned to a known github user         |
+| `hubot issue any <assignee> <#label> <YYYY-MM-DD>` | Lists all the open & closed issues updated with specific label and date assigned to a known github user         |
+| `hubot issue any <assignee> <#label> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the open & closed issues updated with specific label and date assigned to a known github user         |
+| `hubot issue any <assignee> <#text>` | Lists all the open & closed issues with specific text assigned to a known github user         |
+| `hubot issue any <assignee> <#text> <YYYY-MM-DD>` | Lists all the open & closed issues updated with specific text and date assigned to a known github user         |
+| `hubot issue any <assignee> <#text> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the open & closed issues updated with specific text and date range assigned to a known github user         |
+| `hubot issue closed` <br> `hubot issue closed all` | Lists all the closed issues         |
+| `hubot issue closed <YYYY-MM-DD>` <br> `hubot issue closed all <YYYY-MM-DD>` | Lists all the closed issues with specific date         |
+| `hubot issue closed <YYYY-MM-DD..YYYY-MM-DD>` <br> `hubot issue closed all <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the closed issues with specific date range         |
+| `hubot issue closed <#label>` <br> `hubot issue closed all <#label>` | Lists all the closed issues with specific label         |
+| `hubot issue closed <#label> <YYYY-MM-DD>` <br> `hubot issue closed all <#label> <YYYY-MM-DD>` | Lists all the closed issues with specific label and date         |
+| `hubot issue closed <#label> <YYYY-MM-DD..YYYY-MM-DD>` <br> `hubot issue closed all <#label> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the closed issues with specific label and date range         |
+| `hubot issue closed <“text”>` <br> `hubot issue closed all <“text”>` | Lists all the closed issues with specific text         |
+| `hubot issue closed <“text”> <YYYY-MM-DD>` <br> `hubot issue closed all <“text”> <YYYY-MM-DD>` | Lists all the closed issues with specific text and date         |
+| `hubot issue closed <“text”> <YYYY-MM-DD..YYYY-MM-DD>` <br> `hubot issue closed all <“text”> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the closed issues with specific text and date range         |
 | `hubot issue closed <assignee>` | Lists all the closed issues assigned to a known github user         |
+| `hubot issue closed <assignee> <YYYY-MM-DD>` | Lists all the closed issues assigned to a known github user with specific date         |
+| `hubot issue closed <assignee> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the closed issues assigned to a known github user with specific date range         |
 | `hubot issue closed <assignee> <#label>` | Lists all the closed issues with specific label assigned to a known github user         |
+| `hubot issue closed <assignee> <#label> <YYYY-MM-DD>` | Lists all the closed issues with specific label assigned to a known github user with specific date         |
+| `hubot issue closed <assignee> <#label> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the closed issues with specific label assigned to a known github user with specific date range         |
 | `hubot issue closed <assignee> <“text”>` | Lists all the closed issues with specific text assigned to a known github user         |
-| `hubot issue open all` | Lists all the open issues         |
-| `hubot issue open all <#label>` | Lists all the open issues with specific label         |
-| `hubot issue open all <“text”>` | Lists all the open issues with specific text         |
+| `hubot issue closed <assignee> <“text”> <YYYY-MM-DD>` | Lists all the closed issues with specific text assigned to a known github user with specific date         |
+| `hubot issue closed <assignee> <“text”> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the closed issues with specific text assigned to a known github user with specific date range         |
+| `hubot issue open` <br> `hubot issue open all` | Lists all the open issues         |
+| `hubot issue open <YYYY-MM-DD>` <br> `hubot issue open all <YYYY-MM-DD>` | Lists all the open issues with specific date         |
+| `hubot issue open <YYYY-MM-DD..YYYY-MM-DD>` <br> `hubot issue open all <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the open issues with specific date range         |
+| `hubot issue open <#label>` <br> `hubot issue open all <#label>` | Lists all the open issues with specific label         |
+| `hubot issue open <#label> <YYYY-MM-DD>` <br> `hubot issue open all <#label> <YYYY-MM-DD>` | Lists all the open issues with specific label and date         |
+| `hubot issue open <#label> <YYYY-MM-DD..YYYY-MM-DD>` <br> `hubot issue open all <#label> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the open issues with specific label and date range         |
+| `hubot issue open <“text”>` <br> `hubot issue open all <“text”>` | Lists all the open issues with specific text         |
+| `hubot issue open <“text”> <YYYY-MM-DD>` <br> `hubot issue open all <“text”> <YYYY-MM-DD>` | Lists all the open issues with specific text and date         |
+| `hubot issue open <“text”> <YYYY-MM-DD..YYYY-MM-DD>` <br> `hubot issue open all <“text”> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the open issues with specific text and date range         |
 | `hubot issue open <assignee>` | Lists all the open issues assigned to a known github user         |
+| `hubot issue open <assignee> <YYYY-MM-DD>` | Lists all the open issues assigned to a known github user with specific date         |
+| `hubot issue open <assignee> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the open issues assigned to a known github user with specific date range         |
 | `hubot issue open <assignee> <#label>` | Lists all the open issues with specific label assigned to a known user         |
+| `hubot issue open <assignee> <#label> <YYYY-MM-DD>` | Lists all the open issues with specific label and date assigned to a known user         |
+| `hubot issue open <assignee> <#label> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the open issues with specific label and date range assigned to a known user         |
 | `hubot issue open <assignee> <“text”>` | Lists all the open issues with specific text assigned to a known user         |
+| `hubot issue open <assignee> <“text”> <YYYY-MM-DD>` | Lists all the open issues with specific text and date assigned to a known user         |
+| `hubot issue open <assignee> <“text”> <YYYY-MM-DD..YYYY-MM-DD>` | Lists all the open issues with specific text and date range assigned to a known user         |
 | `hubot issue close <#number>`     | Close an existing issue        |
 | `hubot issue reopen <#number>`     | Re-open an existing issue        |
 | `hubot issue create <“title”>`     | Create an issue with title        |

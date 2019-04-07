@@ -2,6 +2,15 @@
 #   Show closed prs from a Github repository
 
 # Commands:
+#   hubot pr closed -- Lists all the closed pull requests.
+#   hubot pr closed <YYYY-MM-DD> -- Lists all the closed pull requests with specific date.
+#   hubot pr closed <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the closed pull requests with specific date range.
+#   hubot pr closed <#label> -- Lists all the closed pull requests with specific label.
+#   hubot pr closed <#label> <YYYY-MM-DD> -- Lists all the closed pull requests with specific label and date.
+#   hubot pr closed <#label> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the closed pull requests with specific label and date range.
+#   hubot pr closed <“text”> -- Lists all the closed pull requests with specific text.
+#   hubot pr closed <“text”> <YYYY-MM-DD> -- Lists all the closed pull requests with specific text and date.
+#   hubot pr closed <“text”> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the closed pull requests with specific text and date range.
 #   hubot pr closed all -- Lists all the closed pull requests.
 #   hubot pr closed all <YYYY-MM-DD> -- Lists all the closed pull requests with specific date.
 #   hubot pr closed all <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the closed pull requests with specific date range.
