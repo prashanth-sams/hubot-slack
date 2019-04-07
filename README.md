@@ -27,6 +27,7 @@ The list of commands that qualify under this implementation is described below, 
 
 ### GitHub Issues
 ======
+
 List, Create, and Reopen GitHub issues
 
 | Command     | Description |
@@ -60,6 +61,7 @@ List, Create, and Reopen GitHub issues
 
 ### Github Pull Request
 ======
+
 List GitHub pull request(s)
 
 | Command     | Description |
