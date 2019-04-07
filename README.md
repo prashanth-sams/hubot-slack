@@ -25,6 +25,8 @@ hubot help - Displays all of the help commands that hubot knows about.
 
 The list of commands that qualify under this implementation is described below, along with additional info.
 
+### Github Issues
+
 | Command     | Description |
 | ---      | ---       |
 | `hubot issue <#number>` | Display an issue with specific number         |
@@ -52,6 +54,12 @@ The list of commands that qualify under this implementation is described below, 
 | `hubot issue create <“title”> <#label>`     | Create an issue with title and label        |
 | `hubot issue create <“title”> body <{body}>`     | Create an issue with title and body        |
 | `hubot issue create <“title”> body <{body}> <#label>`     | Create an issue with title, body, and label        |
+
+
+### Github Pull Request
+
+| Command     | Description |
+| ---      | ---       |
 | `hubot pr <#number>`     | Display a pull request with specific number        |
 | `hubot pr any` <br> `hubot pr any all`     | Lists all the pull requests        |
 | `hubot pr any <YYYY-MM-DD>` <br> `hubot pr any all <YYYY-MM-DD>`     | Lists all the pull requests updated with specific date        |
