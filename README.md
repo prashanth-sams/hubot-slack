@@ -26,7 +26,7 @@ hubot help - Displays all of the help commands that hubot knows about.
 The list of commands that qualify under this implementation is described below, along with additional info.
 
 ### GitHub Issues
-
+======
 List, Create, and Reopen GitHub issues
 
 | Command     | Description |
@@ -59,7 +59,7 @@ List, Create, and Reopen GitHub issues
 
 
 ### Github Pull Request
-
+======
 List GitHub pull request(s)
 
 | Command     | Description |
