@@ -3,6 +3,15 @@
 
 # Commands:
 #   hubot pr <#number> -- Display a pull request with specific number.
+#   hubot pr any -- Lists all the pull requests.
+#   hubot pr any <YYYY-MM-DD> -- Lists all the pull requests updated with specific date.
+#   hubot pr any <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests updated with specific date range.
+#   hubot pr any <#label> -- Lists all the pull requests with specific label.
+#   hubot pr any <#label> <YYYY-MM-DD> -- Lists all the pull requests updated with specific label and date.
+#   hubot pr any <#label> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests updated with specific label and date range.
+#   hubot pr any <#text> -- Lists all the pull requests with specific text.
+#   hubot pr any <#text> <YYYY-MM-DD> -- Lists all the pull requests updated with specific text and date.
+#   hubot pr any <#text> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests updated with specific text and date range.
 #   hubot pr any all -- Lists all the pull requests.
 #   hubot pr any all <YYYY-MM-DD> -- Lists all the pull requests updated with specific date.
 #   hubot pr any all <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the pull requests updated with specific date range.

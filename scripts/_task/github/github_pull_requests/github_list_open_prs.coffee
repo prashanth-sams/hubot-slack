@@ -2,6 +2,15 @@
 #   Show open pull requests from a Github repository
 
 # Commands:
+#   hubot pr open -- Lists all the open pull requests.
+#   hubot pr open <YYYY-MM-DD> -- Lists all the open pull requests with specific date.
+#   hubot pr open <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the open pull requests with specific date range.
+#   hubot pr open <#label> -- Lists all the open pull requests with specific label.
+#   hubot pr open <#label> <YYYY-MM-DD> -- Lists all the open pull requests with specific label and date.
+#   hubot pr open <#label> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the open pull requests with specific label and date range.
+#   hubot pr open <“text”> -- Lists all the open pull requests with specific text.
+#   hubot pr open <“text”> <YYYY-MM-DD> -- Lists all the open pull requests with specific text and date.
+#   hubot pr open <“text”> <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the open pull requests with specific text and date range.
 #   hubot pr open all -- Lists all the open pull requests.
 #   hubot pr open all <YYYY-MM-DD> -- Lists all the open pull requests with specific date.
 #   hubot pr open all <YYYY-MM-DD..YYYY-MM-DD> -- Lists all the open pull requests with specific date range.
