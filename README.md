@@ -92,7 +92,7 @@ List, Create, Close, Open and Reopen GitHub issues
 | `hubot issue create <“title”>`     | Create an issue with title        |
 | `hubot issue create <“title”> <#label>`     | Create an issue with title and label        |
 | `hubot issue create <“title”> body <{body}>`     | Create an issue with title and body        |
-| `hubot issue create <“title”> body <{body}> <#label>`     | Create an issue with title, body, and label        |
+| `hubot issue create <“title”> body <{body}> <#label>`<img width=800/>     | Create an issue with title, body, and label <img width=350/>        |
 
 
 ### Github Pull Request
